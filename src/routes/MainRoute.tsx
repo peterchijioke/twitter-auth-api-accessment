@@ -8,7 +8,7 @@ export default function MainRoute() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/dashboard" element={<DashboardLayout />}>
+        <Route path="/oauth/twitter" element={<DashboardLayout />}>
           <Route index element={<HomePage />} />
         </Route>
         <Route path="/" element={<LoginPage />} />
