@@ -1,0 +1,41 @@
+.LoginLayout {
+  width: 100dvw;
+  height: 100dvh;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.LoginCard {
+  width: 40%;
+  height: 20rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+.Button {
+  width: 300px;
+  outline: none;
+  border: 3px solid #000;
+  height: 60px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 10px;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+.Button:hover {
+  background-color: #000;
+  color: #fff;
+}
+.xIcon {
+  width: 30px;
+  height: 30px;
+  border-radius: 16px;
+  margin-right: 20px;
+}
