@@ -1,19 +1,39 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "../../styles/Login.module.css";
 import Button from "../common/Button";
-import { getTwitterOAuthUrl } from "../../helpers/getTwitterAuthUrl";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useTwitterConnection } from "@ekaruz/react-social-auth";
+import InnerCard from "../common/InnerCard";
 
 export default function LoginCard() {
+  const navigate: any = useNavigate();
+  const { onTwitterConnect, isLoading, twitterData } = useTwitterConnection({
+    clientId: process.env.REACT_APP_TWITTER_CLIENT_ID as string,
+    redirect_uri: "http://www.localhost:3001/oauth/twitter" as string,
+    isOnlyGetCode: false,
+    isOnlyGetToken: false,
+    onReject: () => {
+      navigate("/");
+    },
+    onResolve({ provider, data }) {
+      localStorage.setItem("user", JSON.stringify(twitterData));
+    },
+    clientKeys: `${
+      (process.env.REACT_APP_TWITTER_CLIENT_ID +
+        ":" +
+        process.env.REACT_APP_CLIENT_SECRET) as string
+    }`,
+  });
+
   return (
-    <div className={styles.LoginCard}>
-      <Link className={styles.Button} to={getTwitterOAuthUrl()}>
+    <InnerCard>
+      <Button className={styles.Button} onClick={onTwitterConnect}>
         <img
           className={styles.xIcon}
           src={require("../../assets/images/x.png")}
         />
         {" Login with x"}
-      </Link>
-    </div>
+      </Button>
+    </InnerCard>
   );
 }

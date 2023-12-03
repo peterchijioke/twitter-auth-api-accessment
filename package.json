@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ekaruz/react-social-auth": "^0.0.3",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.19",
@@ -22,7 +23,7 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "dev": "react-scripts start",
+    "dev": "PORT=3001 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -44,5 +45,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react-twitter-auth": "^0.0.6"
   }
 }
