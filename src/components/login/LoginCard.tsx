@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import styles from "../../styles/Login.module.css";
 import Button from "../common/Button";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useTwitterConnection } from "@ekaruz/react-social-auth";
 import InnerCard from "../common/InnerCard";
 
