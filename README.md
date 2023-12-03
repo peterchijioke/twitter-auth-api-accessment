@@ -41,8 +41,8 @@ Provide step-by-step instructions on how users can install your project.
 
 ```bash
 # Example installation steps
-git clone https://github.com/yourusername/yourproject.git
-cd yourproject
+git clone https://github.com/peterchijioke/twitter-auth-api-assessment.git
+cd twitter-auth-api-assessment
 npm install
 
 # Example usage command
