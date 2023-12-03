@@ -12,12 +12,7 @@ export default function LoginCard() {
     redirect_uri: "http://www.localhost:3001/oauth/twitter" as string,
     isOnlyGetCode: false,
     isOnlyGetToken: false,
-    onReject: () => {
-      navigate("/");
-    },
-    onResolve({ provider, data }) {
-      localStorage.setItem("user", JSON.stringify(twitterData));
-    },
+    onReject: () => {},
     clientKeys: `${
       (process.env.REACT_APP_TWITTER_CLIENT_ID +
         ":" +
