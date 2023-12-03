@@ -14,8 +14,6 @@ const LoginCard: React.FC = () => {
     redirect_uri: "http://www.localhost:3001/oauth/twitter" as string,
     isOnlyGetCode: false,
     isOnlyGetToken: false,
-    // Provide an empty function for onReject
-    onReject: () => {},
     // Combine client ID and client secret for clientKeys
     clientKeys:
       `${process.env.REACT_APP_TWITTER_CLIENT_ID}:${process.env.REACT_APP_CLIENT_SECRET}` as string,
