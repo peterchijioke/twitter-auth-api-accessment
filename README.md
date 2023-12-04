@@ -1,7 +1,7 @@
 
 # A simple twitter auth implimentaion.
 
-Brief description or tagline for your project.
+
 
 ## Table of Contents
 
