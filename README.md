@@ -45,6 +45,10 @@ git clone https://github.com/peterchijioke/twitter-auth-api-assessment.git
 cd twitter-auth-api-assessment
 npm install
 
+
+
+NOTE: Create an environment file called .env, the is where you keep your security related keys and read your twitter consumer key from it also.
+
 # Example usage command
 npm start
 
