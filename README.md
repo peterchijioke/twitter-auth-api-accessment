@@ -47,7 +47,7 @@ npm install
 
 
 
-NOTE: Create an environment file called .env, the is where you keep your security related keys and read your twitter consumer key from it also.
+NOTE: Create an environment file called .env, this is where you keep your security related keys, read your twitter consumer key from it also.
 
 # Example usage command
 npm start
