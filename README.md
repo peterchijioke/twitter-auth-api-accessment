@@ -49,6 +49,13 @@ npm install
 
 NOTE: Create an environment file called .env, this is where you keep your security related keys, read your twitter consumer key from it also.
 
+Past the below on the .env file you created in the root directory, for test purpose
+
+
+
+REACT_APP_CLIENT_SECRET=we3rhg5gK6AbWlbItcjbeY2lHIDWJYjMnQnAJDXKi29dl1ee2p
+REACT_APP_TWITTER_CLIENT_ID=ZDB5NHV2NmphUlhIMHlYUkxTb3c6MTpjaQ
+
 # Example usage command
 npm start
 
