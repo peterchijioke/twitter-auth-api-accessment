@@ -54,7 +54,7 @@ Past the below on the .env file you created in the root directory, for test purp
 REACT_APP_CLIENT_SECRET=we3rhg5gK6AbWlbItcjbeY2lHIDWJYjMnQnAJDXKi29dl1ee2p
 REACT_APP_TWITTER_CLIENT_ID=ZDB5NHV2NmphUlhIMHlYUkxTb3c6MTpjaQ
 
-Then restart your the app using npm start or yarn start
+Then restart your  app using npm start or yarn start
 # Example usage command
 npm start
 
