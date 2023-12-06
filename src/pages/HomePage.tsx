@@ -1,7 +1,31 @@
 import { Typography } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
+import { getUserAccessToken } from "../helpers/getuserAccessToke";
 
 const Home = () => {
+  const [searchPrams,setSearchParams]=useSearchParams()
+
+
+const getUserToken =async()=>{
+  try {
+     if (searchPrams.get('code')){
+    const access_token = await getUserAccessToken(`${searchPrams.get('code')}`)
+    if (access_token) {
+      console.log(access_token,"==========token==========")
+      return
+    }
+    console.log(access_token)
+  }
+  } catch (error:any) {
+    console.log(error.message)
+  }
+}
+
+  useEffect(()=>{
+ getUserToken()
+     
+  },[searchPrams])
   return (
     <div style={styles.container}>
       <Typography paragraph>
